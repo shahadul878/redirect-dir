@@ -1,0 +1,12 @@
+
+Your Domain = palsuoq.com
+Sub-Directory = palsuoq
+
+RewriteEngine on 
+RewriteCond %{HTTP_HOST} ^(www.)?palsuoq.com$ 
+RewriteCond %{REQUEST_URI} !^/palsuoq/ 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^(.*)$ /palsuoq/$1 
+RewriteCond %{HTTP_HOST} ^(www.)?palsuoq.com$ 
+RewriteRule ^(/)?$ palsuoq/index.php [L]
